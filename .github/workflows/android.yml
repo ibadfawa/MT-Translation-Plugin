@@ -27,7 +27,9 @@ jobs:
      - name: LS
        run: ls
      - name: CD
-       run: cd build
+       run: cd translator-google
+     - name: ls translate
+       run: ls
      - name: Upload APK
        uses: actions/upload-artifact@v1
        with:
