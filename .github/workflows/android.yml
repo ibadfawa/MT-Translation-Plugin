@@ -24,15 +24,16 @@ jobs:
        
      - name: Build APK
        run: bash ./gradlew assembleDebug --stacktrace
+     - name: LS
+       run: ls
+     - name: CD
+       run: cd build
      - name: Upload APK
        uses: actions/upload-artifact@v1
        with:
          name: apk
          path: build/outputs/mtp/plugin.mtp
-     - name: LS
-       run: ls
-     - name: CD
-       run: cd build
+     
  release:
    name: Release APK
    needs: apk
