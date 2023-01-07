@@ -29,10 +29,10 @@ jobs:
        with:
          name: apk
          path: build/outputs/mtp/plugin.mtp
-     -name: LS
-      run: ls
-     -name: CD
-      run: cd build
+     - name: LS
+       run: ls
+     - name: CD
+       run: cd build
  release:
    name: Release APK
    needs: apk
