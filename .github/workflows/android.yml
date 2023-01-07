@@ -23,18 +23,15 @@ jobs:
        run: chmod +x gradlew
        
      - name: Build APK
-       run: bash ./gradlew assembleDebug --stacktrace
+       run: bash ./gradlew plugin:buildPlugin --stacktrace
      - name: LS
        run: ls
-     - name: CD
-       run: cd translator-google
-     - name: ls translate
-       run: ls
+     
      - name: Upload APK
        uses: actions/upload-artifact@v1
        with:
          name: apk
-         path: build/outputs/mtp/plugin.mtp
+         path: plugin/build/outputs/mtp/plugin.mtp
      
  release:
    name: Release APK
