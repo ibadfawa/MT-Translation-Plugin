@@ -19,8 +19,11 @@ jobs:
        with:
          distribution: temurin
          java-version: "11"
-     - name: remove NDK
-       run: rm -rf /usr/local/lib/android/sdk/ndk/25.1.8937393
+     - name: Setup Android NDK
+       id: setup-ndk
+       uses: nttld/setup-ndk@v1.0.6
+       with:
+          ndk-version: r25
      - name: chmod
        run: chmod +x gradlew
       
