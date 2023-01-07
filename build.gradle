@@ -19,6 +19,10 @@ allprojects {
         mavenCentral()
     }
 }
+  android {
+       ndkVersion '22.1.7171670'
+       ndkVersion '23.2.8568313'
+  }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
